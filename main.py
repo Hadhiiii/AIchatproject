@@ -17,7 +17,7 @@ def find_best_mach(user_question,question):
         user_question,
         question,
         n=1,
-        cutoff=0.6
+        cutoff=0.7
     )
     return matches[0] if matches else None
 
@@ -43,6 +43,10 @@ def chat_bot():
                 data = requests.get(r"https://official-joke-api.appspot.com/random_joke")  # noqa
                 joke = json.loads(data.text)
                 print(f'Bot: {joke["setup"]}\n         {joke["punchline"]}')
+            elif answer == '__time__':
+                data = requests.get(r"https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata")  # noqa
+                time = json.loads(data.text)
+                print(f'Bot: {time["time"]}')
             else:
                 print(f'Bot: {answer}')
         else:

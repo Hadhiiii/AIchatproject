@@ -98,11 +98,31 @@
     },
     {
       "question": "What is your name",
-      "answer": "I am nicson"
+      "answer": "I am maya!"
     },
     {
       "question": "tell me a joke",
       "answer": "__joke__"
+    },
+    {
+      "question": "what is the time?",
+      "answer": "__joke__"
+    },
+    {
+      "question": "who created you?",
+      "answer": "Samurai technologies!!!!"
+    },
+    {
+      "question": "name",
+      "answer": "my name is maya!"
+    },
+    {
+      "question": "time",
+      "answer": "__time__"
+    },
+    {
+      "question": "tell me the time",
+      "answer": "__time__"
     }
   ]
 }
