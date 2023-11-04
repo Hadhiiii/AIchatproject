@@ -119,6 +119,14 @@
     {
       "question": "tell me the time",
       "answer": "__time__"
+    },
+    {
+      "question": "hahaha",
+      "answer": "Yhaa..! thats funny!!"
+    },
+    {
+      "question": "hi hi hi",
+      "answer": "Yhaa..! thats funny!!"
     }
   ]
 }
