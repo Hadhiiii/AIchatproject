@@ -90,9 +90,13 @@ def chat_bot(user_input=None):
             case '__time__':
                 data = requests.get(r"https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata")  # noqa
                 time = json.loads(data.text)
-                print(f'Bot: {time["time"]}')
+                text= f'Bot: {time["time"]}'
+                print(text)
+                speak(text)
             case _:     #this is the default case; means no maching case
-                print(f'Bot: {answer}')
+                text=f'{answer}'
+                print(text)
+                speak(text)
 
     #this block of code will execute when there is no data in the knowledge_base.json file
     else:
@@ -102,6 +106,7 @@ def chat_bot(user_input=None):
 
         #added wikipedia module for searching data online
         if new_answer.lower() in ["yes","y"]:
+            wikipedia.set_lang('es')
             text=f'y{wikipedia.summary(user_input)}'
             print(text)
             speak(text)
